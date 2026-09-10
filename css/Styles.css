@@ -1,0 +1,240 @@
+:root {
+  --bg-dark: #0a0e17;
+  --accent-cyan: #00f0ff;
+  --text-white: #ffffff;
+  --text-muted: #8c9ba8;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-dark) !important;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-white) !important;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand span {
+  color: var(--accent-cyan);
+}
+
+.navbar .text-white {
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .text-white:hover {
+  color: var(--accent-cyan) !important;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 90vh;
+  background: radial-gradient(circle at center, rgba(0, 240, 255, 0.08) 0%, transparent 70%), var(--bg-dark);
+  color: var(--text-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-weight: 800;
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  margin-bottom: 1rem;
+}
+
+.hero h1 span {
+  color: var(--accent-cyan);
+}
+
+.hero .lead {
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: var(--text-muted);
+}
+
+/* General Sections & Cards */
+section {
+  padding: 80px 0;
+}
+
+h2 {
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: #111726;
+  padding: 2rem 1.5rem;
+  height: 100%;
+}
+
+.service-card h4 {
+  color: var(--accent-cyan);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
+}
+
+/* Botones unificados con el único color de acento */
+.btn-primary,
+.btn-light {
+  border-radius: 999px;
+  padding: 0.85rem 2rem;
+  font-weight: 700;
+  border: none;
+  background: var(--accent-cyan);
+  color: #000000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.btn-primary:hover,
+.btn-light:hover {
+  background: var(--accent-cyan);
+  color: #000000;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.6);
+}
+
+/* Contact Section */
+#contact {
+  background: var(--bg-dark);
+  color: var(--text-white);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#contact h2 {
+  color: var(--text-white);
+}
+
+/* Footer */
+footer {
+  font-size: 14px;
+  background: var(--bg-dark) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+}
+
+footer .social-links a {
+  color: var(--text-muted);
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+  color: var(--accent-cyan);
+}
+
+/* Animaciones */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Gallery / Code Showcase Styles */
+.code-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.badge-code {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid var(--accent-cyan);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Caja Editor de Código */
+.code-box {
+  background: #060910;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.82rem;
+  overflow-x: auto;
+}
+
+.code-box pre {
+  margin: 0;
+  color: #e2e8f0;
+}
+
+.code-keyword { color: var(--accent-cyan); font-weight: bold; }
+.code-var { color: #82aaff; }
+.code-func { color: #ffcb6b; }
+.code-title { color: #c3e88d; }
+
+/* Vista Previa Visual Mockup */
+.preview-box {
+  background: #060910;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-height: 110px;
+}
+
+.mockup-header { height: 10px; background: rgba(0, 240, 255, 0.2); border-radius: 4px; }
+.mockup-line { height: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 3px; margin: 0 auto; }
+.mockup-btn { 
+  font-size: 0.7rem; 
+  background: var(--accent-cyan); 
+  color: #000; 
+  font-weight: bold; 
+  border-radius: 12px; 
+  display: inline-block;
+}
+
+/* Botón secundario en tarjetas */
+.btn-outline-neon {
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.btn-outline-neon:hover {
+  background: var(--accent-cyan);
+  color: #000;
+}
